@@ -1,0 +1,444 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+:root{
+  --color-primary: #444CF7;
+  --color-title: #000;
+  --align-title: left;
+  --padding-container: 100px 0;
+  --width-container: 90%;
+  --max-width-container: 1200px;
+  --color-btn: #444CF7;
+  --text-btn: #fff;
+  --padding-btn: 20px 35px;
+  --height-shape:18em;
+}
+
+
+body{
+  height: 100%; 
+  font-family: 'Noto Sans', sans-serif;
+  background-color:#fff;
+  z-index: -1;
+}
+/**/
+
+/*para e menu*/
+
+  
+.header2 {
+  background-color:#77c9d4;
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+ /*contenedor del menú*/
+.menu_contenedor{
+  display: flex;
+  justify-content: space-between;
+  z-index: 1000;
+/*cuando este abierto en un cell*/
+  max-width: 992px;
+  margin: 0 auto;
+  
+}
+
+.estilo_lin{
+  color: white;
+  text-decoration: none;
+}
+   /**/
+ /*el nombre del instituto*/
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 0 40px;
+  line-height: 84px;
+  text-transform: uppercase;
+  width: max-content;
+  font-family: 'open sans';
+ letter-spacing: 2px;
+}
+/* para que se haga columna y no*/
+.las_ul {
+  display: flex;
+  margin-right: 40px;
+  list-style: none;
+}
+   /**/
+.opciones_c{
+  font-size: 18px;
+  margin: 0 10px;
+  line-height: 80px;
+  text-transform: uppercase;
+  width: max-content;
+  letter-spacing: 1px;
+}
+   /* espaciado de los enlaces en  la pc de escritorio*/
+.opciones{
+  padding: 8px 12px;
+  border-radius: 3px;
+}
+   /*efecto hover y que aparesca seleccionado*/
+.opciones:hover,
+.link_seleccionado {
+  background-color: #034574;
+  transition: 0.5s;
+}
+
+/* botón del menu aquí esta oculto */
+.el_boton {
+  width: auto;
+  color: white;
+  background: none;
+  border: none;
+  font-size: 30px;
+  padding: 0 20px;
+  line-height: 60px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: none;
+}
+
+/*para  dispositivos menores de 768px*/
+@media (max-width: 768px) {
+  body {
+    padding-top: 70px;
+  }
+
+  .header2 {
+    height: 60px;
+  }
+
+  .logo {
+    font-size: 25px;
+    padding: 0 20px;
+    line-height: 60px;
+  }
+
+  .las_ul{
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    background-color: #2c3e50;
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    padding: 20px 0;
+ 
+
+    height: calc(100% - 60px);
+    overflow-y: auto;
+
+    left: 100%;
+    transition: left 0.3s;
+  }
+
+  .opciones_c{
+    line-height: 70px;
+   letter-spacing: 6px;
+
+  }
+
+  .opciones:hover,
+  .link_seleccionado {
+    background: rgb(233, 233, 233);
+    color: #0091ff;
+    font-size: 25px;
+  }
+
+  .el_boton {
+    display: block;
+    margin-top: 2px;
+  }
+  .icono{
+      border-radius: 50%;
+     
+  }
+
+  .nav-menu_visible {
+    left: 0;
+  }
+
+  .el_boton:focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+/*estilos del formulario*/
+
+.contact_form{  
+  width: 460px; 
+  height: auto;
+  margin: 90px auto;
+  border-radius: 10px;  
+  padding-top: 30px;
+  padding-bottom: 20px;  
+  background-color: #1a1a1a; 
+  padding-left: 30px; 
+}
+
+
+input{
+  background-color: #ffffff; 
+  width: 408px; 
+  height: 40px; 
+  border-radius: 5px;  
+  border-style: solid; 
+  border-width: 1px; 
+  border-color: #ab4493; 
+  margin-top: 10px;  
+  padding-left: 10px;
+  margin-bottom: 20px; 
+}
+
+
+textarea{
+  background-color: #fcf6f6; 
+  width: 405px; 
+  height: 150px; 
+  border-radius: 5px;  
+  border-style: solid; 
+  border-width: 1px; 
+  border-color: #ab4493; 
+  margin-top: 10px;  
+  padding-left: 10px;
+  margin-bottom: 20px; 
+  padding-top: 15px; 
+}
+
+/*los campos como ser Nombre Email etc..*/
+label{
+  width: 90%;
+  display: block; 
+  float: center;  
+}
+
+
+button{
+  height: 45px;   
+  margin-bottom: 10px; 
+  margin-top: 20px;   
+  text-transform: uppercase;
+  background-color: #ab4493; 
+  border-color: #ab4493; 
+  border-style: solid; 
+  border-radius: 10px;  
+  width: 90%;   
+  cursor: pointer;
+}
+.limpiar_{
+  width: 90%;   
+  border-radius: 10px;  
+  text-align: center;
+}
+
+button p{
+  color: #fff; 
+  letter-spacing: 2px;
+}
+#enviar:hover{
+  background: #44a3ab;
+  border-color: #44a3ab;
+}
+
+span{
+  color: #ffffff; 
+}
+
+
+.aviso{
+  font-size: 15px;  
+  color: #ffffff;  
+}
+
+
+h1{
+  font-size: 39px;  
+  text-align: center; 
+  padding-bottom: 20px; 
+  color: #ab4493;
+}
+
+
+h3{
+  font-size: 16px; 
+  padding-bottom: 30px;
+  color: #ffffff;   
+}
+
+
+p{
+  font-size: 14px; 
+  color: #ffffff; 
+}
+
+/* contestado el campo va ser de de este color el fodo */
+::-webkit-input-placeholder {
+ color: #a8a8a8;
+}
+
+
+::-webkit-textarea-placeholder {
+ color: #a8a8a8;
+}
+
+/* cundo conteste los primeros campos el borde sera de este color */
+.formulario input:focus{
+  outline:0;
+  border: 1px solid #97d848;
+}
+
+/* cuando conteste el cambo de mensaje el borde pasara a este color */
+.formulario textarea:focus{ 
+  outline:0;
+  border: 1px solid #97d848;
+}
+
+
+/*formulario para que cunado se abra en un cell*/
+@media (max-width: 768px) {
+.contact_form{  
+  width: 90%;
+  margin-left: 5% ; 
+  margin-right: 5%;
+}
+
+
+input{
+  width: 90%; 
+}
+textarea{
+  width: 90%; 
+
+}
+button{
+  width: 90%;   
+}
+}
+@media  (max-width: 500px) {
+  .contact_form{  
+    width: 96%;
+    margin-left: 2% ; 
+    margin-right: 2%;
+  }
+  
+  
+  input{
+    width: 96%; 
+  }
+  textarea{
+    width: 96%; 
+  
+  }
+  button{
+    width: 96%;   
+  }
+  
+}
+    /* Footer */
+    footer{
+      width: 100%;
+      background:#E5E5F7;
+  }
+  
+  .footer{
+      position: relative;
+      --padding-container: 160px 0 50px ;
+  
+  }
+  .container{
+      width: 90%;
+      max-width: var(--max-width-container);
+      padding: var(--padding-container);
+      margin: 0 auto;
+      overflow: hidden;
+      background:  #E5E5F7;
+  }
+  
+  
+  
+  .footer::before{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100px;
+      background: #fff;
+      top: 0;
+      left: 0;
+      clip-path: polygon(0 0, 100% 0, 50% 100%);
+  
+  }
+  
+  .footer_contactos{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      place-items: center;
+      margin-bottom: 30px;
+  }
+  
+  .footer_parra{
+      margin: 20px 0;
+      font-weight: 300;
+      color: #1a1a1a;
+  }
+  
+  .footer_iconos{
+      display: flex;
+      padding-top: 30px;
+      flex-wrap: wrap;
+  }
+  
+  .footer_icono{
+      width: 60px;
+      height: 60px;
+      border: 1px solid #000;
+      border-radius: 50%;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .icon_footer{
+      width: 30px;
+  }
+  
+  
+  .footer_imagen{
+      margin: 0;
+  }
+  
+  .img_footer{
+      width: 100%;
+  }
+  
+  .footer__copyright{
+      padding-top: 30px;
+      border-top: 2px solid #918484;
+      text-align: center;
+      color: #1a1a1a;
+  }
+  @media  screen and (max-width:900px){
+      /*footer*/
+      .footer_contactos{
+          grid-template-columns: 1fr;
+      }
+      
+      .footer_texto{
+          order: 1;
+          --align-title: center;
+      }
+      
+      .footer_iconos{
+          justify-content: space-evenly;
+      }
+        
+  }
+ 

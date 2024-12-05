@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>INGSAR</title>
+    <link rel="shortcut icon" href="Img.ingsar/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/estilos_formulario.css">
+    <script defer src="java/movimiento.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header2">           
+            <nav class="menu_contenedor">
+              <h1 class="logo estilo_lin">INGSAR</h1>
+              <button class="el_boton" aria-label="Abrir menú">
+                <img src="iconos/menu2.1.svg"  class="icono">
+              </button>
+              <ul class="las_ul">
+                <li class="opciones_c">
+                  <a href="index.html" class="opciones estilo_lin " >Home</a>
+                </li>
+                <li class="opciones_c">
+                  <a href="carreras.html" class="opciones estilo_lin">Carreras</a>
+                </li>
+                <li class="opciones_c">
+                  <a href="galeria.html" class="opciones estilo_lin">Galería</a>
+                </li>
+                <li class="opciones_c">
+                  <a href="formulario.html" class="opciones estilo_lin  link_seleccionado">Contacto</a>
+                 
+                </li>
+              </ul>
+            </nav>
+        </div>
+      
+    </header>
+    <main>
+                
+  
+<!---->
+<!--contenedor de el formulario-->
+  <div class="contact_form">
+ 
+    <div class="formulario">      
+      <h1>Formulario de contacto</h1>
+        <h3>Escríbenos y en breve los pondremos en contacto contigo</h3>
+
+  <!--el formulario-->
+          <form  method="post" action="enviar_email.php">      
+      <p>
+      <label for="nombre" class="colocar_nombre">Nombre
+      <span class="obligatorio">*</span>
+      </label>
+      <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+      </p>        
+      <p>
+      <label for="email" class="colocar_email">Email
+      <span class="obligatorio">*</span>
+      </label>
+      <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">   
+    </p>       
+    <p>
+    <label for="telefone" class="colocar_telefono">Teléfono
+    </label>
+    <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
+    </p>             
+    <p>
+    <label for="asunto" class="colocar_asunto">Asunto
+    <span class="obligatorio">*</span>
+    </label>
+    <input type="text" name="introducir_asunto" id="asunto" required="obligatorio" placeholder="Escribe un asunto">
+    </p>           
+    <p>
+    <label for="mensaje" class="colocar_mensaje">Mensaje
+    <span class="obligatorio">*</span>
+    </label>                     
+    <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
+    </p>                    
+    <p class="aviso">
+      <span class="obligatorio"> * </span>los campos son obligatorios.
+      </p>   
+    <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
+    <input  class="limpiar_"type="reset" name="limpiar" value="limpiar">   
+          </form>
+    </div>  
+  </div>
+
+    </main>
+    <footer class="footer">
+      <div class="footer_contenedor container">
+  
+          <div class="footer_contactos">
+              <div class="footer_texto">
+                  <h2 class="title">Buscanos en nuestras redes sociales</h2>
+                  <p class="footer_parra">Si tienes alguna duda, puedes interactuar en cualquiera de nuestras redes sociales</p>
+  
+                  <div class="footer_iconos">
+                      <a href="https://www.facebook.com/Instituto-San-Ramon-281322455215086/" class="footer_icono">
+                         <img src="iconos/facebook.svg" class="icon_footer">
+                      </a>
+                      <a href="https://twitter.com/InstitutoSanRa1" class="footer_icono">
+                         <img src="iconos/twitter.svg" class="icon_footer">
+                      </a>
+                      <a href="https://www.youtube.com/channel/UCWMqOg5BuAWojISJNYgzRFg" class="footer_icono">
+                         <img src="iconos/youtube.svg" class="icon_footer">
+                      </a>
+                      <a href="https://instagram.com/institutosanramon?igshid=YmMyMTA2M2Y=" class="footer_icono">
+                         <img src="iconos/instagram.svg" class="icon_footer">
+                      </a>
+                  </div>
+              </div>
+  
+              <figure class="footer_imagen">
+                  <img src="iconos/img_footer.svg" class="img_footer">
+              </figure>
+          </div>
+  
+          <p class="footer__copyright">
+              Sitio web creado por &copy;  B.T.P en Informática 2022
+          </p>
+  
+      </div>
+  </footer>
+   
+</body>
+
+</html>
